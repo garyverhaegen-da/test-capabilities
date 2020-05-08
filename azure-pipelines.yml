@@ -1,0 +1,23 @@
+trigger:
+  batch: false
+  branches:
+    include:
+      - master
+
+jobs:
+  - job: ploup
+    pool:
+      name: 'testing'
+      demands: ploup -equals blabla
+    steps:
+      - bash: |
+          set -euo pipefail
+          echo "hello"
+  - job: ploup
+    pool:
+      name: 'testing'
+      demands: ploup -equals plop
+    steps:
+      - bash: |
+          set -euo pipefail
+          echo "hello"
