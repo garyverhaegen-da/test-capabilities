@@ -5,7 +5,7 @@ trigger:
       - master
 
 jobs:
-  - job: ploup
+  - job: ploup_blabla
     pool:
       name: 'testing'
       demands: ploup -equals blabla
@@ -13,7 +13,7 @@ jobs:
       - bash: |
           set -euo pipefail
           echo "hello"
-  - job: ploup
+  - job: ploup_plop
     pool:
       name: 'testing'
       demands: ploup -equals plop
